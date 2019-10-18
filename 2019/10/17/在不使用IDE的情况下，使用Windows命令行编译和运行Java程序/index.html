@@ -8,14 +8,14 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>在不使用IDE的情况下，使用Windows命令行编译和运行Java程序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对不使用第三方jar的.java文件进行编译及运行1.设定基目录选定一个基目录下如：C:\Users\leopp\Desktop2.移动类至该基目录下要注意文件目录设置，例：若将com.lpx.core.java这个类添加到基目录下时， 该类应该存放在C:\Users\leopp\Desktop\com\lpx路径下。3.编译该文件命令： javac  &amp;lt;相对路径&amp;gt;   如果pwd是">
+  <meta name="description" content="对不使用第三方jar的.java文件进行编译及运行1.设定基目录选定一个基目录下如：C:\Users\leopp\Desktop 2.移动类至该基目录下要注意文件目录设置，例：若将com.lpx.core.java这个类添加到基目录下时，该类应该存放在C:\Users\leopp\Desktop\com\lpx路径下。 3.编译该文件命令： javac  &amp;lt;相对路径&amp;gt;如果pwd是 C:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在不使用IDE的情况下，使用Windows命令行编译和运行Java程序">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;17&#x2F;%E5%9C%A8%E4%B8%8D%E4%BD%BF%E7%94%A8IDE%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E4%BD%BF%E7%94%A8Windows%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E5%92%8C%E8%BF%90%E8%A1%8CJava%E7%A8%8B%E5%BA%8F&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="对不使用第三方jar的.java文件进行编译及运行1.设定基目录选定一个基目录下如：C:\Users\leopp\Desktop2.移动类至该基目录下要注意文件目录设置，例：若将com.lpx.core.java这个类添加到基目录下时， 该类应该存放在C:\Users\leopp\Desktop\com\lpx路径下。3.编译该文件命令： javac  &amp;lt;相对路径&amp;gt;   如果pwd是">
+<meta property="og:description" content="对不使用第三方jar的.java文件进行编译及运行1.设定基目录选定一个基目录下如：C:\Users\leopp\Desktop 2.移动类至该基目录下要注意文件目录设置，例：若将com.lpx.core.java这个类添加到基目录下时，该类应该存放在C:\Users\leopp\Desktop\com\lpx路径下。 3.编译该文件命令： javac  &amp;lt;相对路径&amp;gt;如果pwd是 C:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-18T12:02:16.931Z">
+<meta property="og:updated_time" content="2019-10-18T12:05:28.857Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -172,20 +172,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="对不使用第三方jar的-java文件进行编译及运行"><a href="#对不使用第三方jar的-java文件进行编译及运行" class="headerlink" title="对不使用第三方jar的.java文件进行编译及运行"></a>对不使用第三方jar的.java文件进行编译及运行</h2><h3 id="1-设定基目录"><a href="#1-设定基目录" class="headerlink" title="1.设定基目录"></a>1.设定基目录</h3><pre><code>选定一个基目录下如：C:\Users\leopp\Desktop</code></pre><h3 id="2-移动类至该基目录下"><a href="#2-移动类至该基目录下" class="headerlink" title="2.移动类至该基目录下"></a>2.移动类至该基目录下</h3><pre><code>要注意文件目录设置，例：若将com.lpx.core.java这个类添加到基目录下时，
-该类应该存放在C:\Users\leopp\Desktop\com\lpx路径下。</code></pre><h3 id="3-编译该文件"><a href="#3-编译该文件" class="headerlink" title="3.编译该文件"></a>3.编译该文件</h3><pre><code>命令： javac  &lt;相对路径&gt;  
-如果pwd是 C:\Users\leopp\Desktop\com\lpx ,
-直接键入  &apos;javac core.java&apos;
-如果pwd是 C:\Users\leopp\Desktop\com
-键入      &apos;javac lpx\core.java&apos;</code></pre><h3 id="4-运行该文件"><a href="#4-运行该文件" class="headerlink" title="4.运行该文件"></a>4.运行该文件</h3><pre><code>！！先回到基目录， C:\Users\leopp\Desktop （这一步一定不能少）
-键入命令 java com.lpx.core</code></pre><h2 id="对不使用第三方jar的-java文件进行编译及运行-1"><a href="#对不使用第三方jar的-java文件进行编译及运行-1" class="headerlink" title="对不使用第三方jar的.java文件进行编译及运行"></a>对不使用第三方jar的.java文件进行编译及运行</h2><h3 id="1、2-两步与上方一致"><a href="#1、2-两步与上方一致" class="headerlink" title="1、2 两步与上方一致"></a>1、2 两步与上方一致</h3><h3 id="3-编译该文件-1"><a href="#3-编译该文件-1" class="headerlink" title="3 编译该文件"></a>3 编译该文件</h3><pre><code>！！ **一定先要将让pwd为包含该.java文件的子目录**
-&apos;java -cp C:\Users\leo\Desktop\java_practice\algs4.jar;.  Cat.java&apos;
-. 代表的是当前路径， -cp 指向含jar的目录 和 当前文件夹就🆗， 
-如果引用了多个jar，要把多个jar放在同一文件夹下， 让后使用通配符*
-&apos;java -cp C:\Users\leo\Desktop\java_practice\algs4.*;.  Cat.java&apos;</code></pre><h3 id="4-运行该文件-1"><a href="#4-运行该文件-1" class="headerlink" title="4  运行该文件"></a>4  运行该文件</h3><pre><code>运行该文件可以从计算机的任何位置运行，当前提是用-cp指明了 （1）存放jar的文件夹 （2）当前文件夹 （3）类所在的基文件夹
-&apos;java -cp C:\Users\leo\Desktop\java_practice\algs4.jar;.;C:\Users\leo\Desktop\java_practice timer.TimerTest&apos;
-time.Timer 类存放在java_practice文件夹下， 假如输出文件默认会输出在pwd下，但可以使用重定向。</code></pre><p>总结： 编译必须是从当前位置开始，指明.java文件存放的相对路径就可以编译<br>       不明白为什么不能用-cp指明绝对路径，然后在任意pwd编译。 （<strong><em>此法不可行</em></strong>） 有大佬知道麻烦告知原因👀 </p>
-
+        <h2 id="对不使用第三方jar的-java文件进行编译及运行"><a href="#对不使用第三方jar的-java文件进行编译及运行" class="headerlink" title="对不使用第三方jar的.java文件进行编译及运行"></a>对不使用第三方jar的.java文件进行编译及运行</h2><h3 id="1-设定基目录"><a href="#1-设定基目录" class="headerlink" title="1.设定基目录"></a>1.设定基目录</h3><p>选定一个基目录下如：C:\Users\leopp\Desktop</p>
+<h3 id="2-移动类至该基目录下"><a href="#2-移动类至该基目录下" class="headerlink" title="2.移动类至该基目录下"></a>2.移动类至该基目录下</h3><p>要注意文件目录设置，例：若将com.lpx.core.java这个类添加到基目录下时，<br>该类应该存放在C:\Users\leopp\Desktop\com\lpx路径下。</p>
+<h3 id="3-编译该文件"><a href="#3-编译该文件" class="headerlink" title="3.编译该文件"></a>3.编译该文件</h3><p>命令： javac  &lt;相对路径&gt;<br>如果pwd是 C:\Users\leopp\Desktop\com\lpx ,<br>直接键入  ‘javac core.java’<br>如果pwd是 C:\Users\leopp\Desktop\com<br>键入      ‘javac lpx\core.java’</p>
+<h3 id="4-运行该文件"><a href="#4-运行该文件" class="headerlink" title="4.运行该文件"></a>4.运行该文件</h3><p>！！先回到基目录， C:\Users\leopp\Desktop （这一步一定不能少）<br> 键入命令 java com.lpx.core</p>
+<h2 id="对不使用第三方jar的-java文件进行编译及运行-1"><a href="#对不使用第三方jar的-java文件进行编译及运行-1" class="headerlink" title="对不使用第三方jar的.java文件进行编译及运行"></a>对不使用第三方jar的.java文件进行编译及运行</h2><h3 id="1、2-两步与上方一致"><a href="#1、2-两步与上方一致" class="headerlink" title="1、2 两步与上方一致"></a>1、2 两步与上方一致</h3><h3 id="3-编译该文件-1"><a href="#3-编译该文件-1" class="headerlink" title="3 编译该文件"></a>3 编译该文件</h3><p>！！ <strong>一定先要将让pwd为包含该.java文件的子目录</strong><br>‘java -cp C:\Users\leo\Desktop\java_practice\algs4.jar;.  Cat.java’<br>. 代表的是当前路径， -cp 指向含jar的目录 和 当前文件夹就🆗，<br>如果引用了多个jar，要把多个jar放在同一文件夹下， 让后使用通配符*<br>‘java -cp C:\Users\leo\Desktop\java_practice\algs4.*;.  Cat.java’</p>
+<h3 id="4-运行该文件-1"><a href="#4-运行该文件-1" class="headerlink" title="4  运行该文件"></a>4  运行该文件</h3><p>运行该文件可以从计算机的任何位置运行，当前提是用-cp指明了 （1）存放jar的文件夹 （2）当前文件夹 （3）类所在的基文件夹<br>‘java -cp C:\Users\leo\Desktop\java_practice\algs4.jar;.;C:\Users\leo\Desktop\java_practice timer.TimerTest’<br>time.Timer 类存放在java_practice文件夹下， 假如输出文件默认会输出在pwd下，但可以使用重定向。</p>
+<h3 id="总结：-编译必须是从当前位置开始，指明-java文件存放的相对路径就可以编译"><a href="#总结：-编译必须是从当前位置开始，指明-java文件存放的相对路径就可以编译" class="headerlink" title="总结： 编译必须是从当前位置开始，指明.java文件存放的相对路径就可以编译"></a>总结： 编译必须是从当前位置开始，指明.java文件存放的相对路径就可以编译</h3><pre><code>不明白为什么不能用-cp指明绝对路径，然后在任意pwd编译。 （***此法不可行***） 有大佬知道麻烦告知原因👀 </code></pre>
       
 
       
