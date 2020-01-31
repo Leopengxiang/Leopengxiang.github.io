@@ -8,10 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>锅盖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="中国地质大学（北京）14级本科，中国石油大学（北京）18级硕士，跟风转行的渣渣后台开发菜鸡，但立志成为一名优秀的开发人员，开源世界的参与者！">
+<meta name="keywords" content="code and everything">
+<meta property="og:type" content="website">
 <meta property="og:title" content="锅盖的博客">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
 <meta property="og:site_name" content="锅盖的博客">
+<meta property="og:description" content="中国地质大学（北京）14级本科，中国石油大学（北京）18级硕士，跟风转行的渣渣后台开发菜鸡，但立志成为一名优秀的开发人员，开源世界的参与者！">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
   
@@ -48,6 +51,8 @@
 		  <h1 class="header-author"><a href="/">Leo Px</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">独立思考</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -64,8 +69,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -101,6 +104,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">Leo Px</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>独立思考<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -142,6 +147,109 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-TCP与UDP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/31/TCP%E4%B8%8EUDP/">TCP与UDP</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/31/TCP%E4%B8%8EUDP/" class="archive-article-date">
+  	<time datetime="2020-01-31T11:25:13.245Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="传输层的两个主要协议-TCP-与-UDP-的学习"><a href="#传输层的两个主要协议-TCP-与-UDP-的学习" class="headerlink" title="传输层的两个主要协议 TCP 与 UDP 的学习"></a>传输层的两个主要协议 TCP 与 UDP 的学习</h1><h2 id="1-传输层功能"><a href="#1-传输层功能" class="headerlink" title="1. 传输层功能"></a>1. 传输层功能</h2><pre><code>传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。
+传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。</code></pre><h2 id="2-TCP-和-UDP"><a href="#2-TCP-和-UDP" class="headerlink" title="2. TCP 和 UDP"></a>2. TCP 和 UDP</h2><pre><code>在 TCP/IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP</code></pre><ul>
+<li><p>连接的概念<br>  连接是指各种设备、线路，或网络中进行**通信的两个应用程序为了相互传递消息而专有的、虚拟的通信线路。</p>
+</li>
+<li><p>TCP 简介</p>
+<ul>
+<li>TCP 是<strong>面向连接的</strong>、可靠的流协议。TCP 为提供可靠性传输，实行 “顺序控制” 或 “重发控制” 机制。 此外还具有 “流控制（流量控制）”、“拥塞控制”、提高网络利用率等众多功能。</li>
+</ul>
+</li>
+<li><p>UDP 简介</p>
+<ul>
+<li>UDP 不提供复杂的控制机制，<strong>利用 IP 提供面向无连接的通信服务</strong>。并且它是将应用程序发来的数据在收到的那一刻，立即原样发送到网络上的一种机制。因此它是不具有可靠性的数据报传输协议。细微的处理它会交给上层的应用去完成。在 UDP 的情况下，不能保证消息一定会到达。因此应用有时会根据自己的需求进行重发处理。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>二者的优势对比<ul>
+<li>TCP 的优势在于能够实现可靠的传输，它是面向有连接并具备顺序控制、重发控制等机制，在应用需要可靠传输时使用较多。</li>
+<li>UDP 的优势在简单、高速。主要用于哪些对高速传输和实时性要求有较高要求的通信，如视频、音频等即时通信，在多播和广播通信中常常使用 UDP 而不是 TCP。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-端口号"><a href="#3-端口号" class="headerlink" title="3. 端口号"></a>3. 端口号</h2><pre><code>端口号类似于传输层的地址</code></pre><h3 id="通过-IP-地址、端口号、协议号进行通信识别"><a href="#通过-IP-地址、端口号、协议号进行通信识别" class="headerlink" title="通过 IP 地址、端口号、协议号进行通信识别"></a>通过 IP 地址、端口号、协议号进行通信识别</h3><pre><code>在 TCP/IP 或 UDP/IP 通信中通常采用5个信息来识别一个通信。它们时“源 IP 地址”、 “目的 IP 地址”、 “协议号”（表示上层是 TCP 还是 UDP）、 “源端口号”、 “目的端口号”.</code></pre><h3 id="端口号与协议"><a href="#端口号与协议" class="headerlink" title="端口号与协议"></a>端口号与协议</h3><pre><code>不同的传输协议可以使用相同的端口号。TCP 和 UDP 使用同一个端口号时，在端口号上的处理是不同的，根据不同的传输协议进行不同的处理。</code></pre><h2 id="4-TCP-的特点"><a href="#4-TCP-的特点" class="headerlink" title="4. TCP 的特点"></a>4. TCP 的特点</h2><pre><code>TCP 是一种可靠的传输，而为了通过 IP 实现可靠的传输需要解决以下问题：数据的破坏、丢包、重复以及分片顺序混乱等。
+TCP 通过检验和、序列号、确认应答、重发控制、连接管理以及窗口控制等机制对应的解决了上述问题，实现可靠传输。</code></pre><ul>
+<li><p>利用序列号和确认应答（ACK）提高可靠性<br>  序列号是按顺序给发送数据的每一个字节都标上号码的编号。接受端查询接收数据的 TCP 首部中的序列号和数据的长度，将下一步应该接收的序号作为确认应答返送回去。 通过序列号和确认应答可以实现<strong>重发控制以及重复控制</strong>等功能。</p>
+</li>
+<li><p>重发超时：在重发数据之前，等待确认应答到来的那个确定的时间间隔。如果超过了这个时间仍未得到确认应答，发送端将进行数据重发。</p>
+</li>
+<li><p>连接管理：<br>  TCP 是面向有连接的通信传输。面向有连接是指在数据通信开始之前就做好两端之间的准备工作。<br>  一个连接的建立与断开至少需要来回发送七个包。三次握手四次挥手。</p>
+</li>
+<li><p>TCP 以段为单位发送数据：<br>  段又称最大消息长度 MSS(Maximum Segment Size), MSS 是在三次握手的时候，在两端主机之间被计算得出。</p>
+</li>
+<li><p>利用窗口控制提高速度：<br>窗口的大小是指无需等待确认应答而可以继续发送数据的最大值。这个机制的实现使用了大量的缓冲区。</p>
+</li>
+<li><p>高速重发控制：发送端主机如果连续三次收到同一个确认应答，就会将其所对应的数据进行一个重发，这种机制比之前的超时管理更加高效。</p>
+</li>
+<li><p>流控制： 根据接收端实际接收能力控制发送端发送的数据量，通过控制窗口大小实现，TCP 首部中撞门有一个字段用来通知窗口的大小。</p>
+</li>
+<li><p>拥塞控制： 根据网络状况控制发送端发送数据的数量。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/31/TCP%E4%B8%8EUDP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-第三章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -288,7 +396,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Leo Px
+    		&copy; 2020 Leo Px
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -305,7 +413,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -329,8 +437,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -342,15 +448,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -414,43 +518,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">锅盖&lt;br&gt;&lt;br&gt;语言的贫乏，导致生活的贫瘠&lt;br&gt;</div>
   	  	
     	</section>
     

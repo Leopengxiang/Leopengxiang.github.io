@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/12 | 锅盖的博客</title>
+  <title>TCP与UDP | 锅盖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="中国地质大学（北京）14级本科，中国石油大学（北京）18级硕士，跟风转行的渣渣后台开发菜鸡，但立志成为一名优秀的开发人员，开源世界的参与者！">
+  <meta name="description" content="传输层的两个主要协议 TCP 与 UDP 的学习1. 传输层功能传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。2. TCP 和 UDP在 TCP&#x2F;IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP 连接的概念">
 <meta name="keywords" content="code and everything">
-<meta property="og:type" content="website">
-<meta property="og:title" content="锅盖的博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;12&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCP与UDP">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;31&#x2F;TCP%E4%B8%8EUDP&#x2F;index.html">
 <meta property="og:site_name" content="锅盖的博客">
-<meta property="og:description" content="中国地质大学（北京）14级本科，中国石油大学（北京）18级硕士，跟风转行的渣渣后台开发菜鸡，但立志成为一名优秀的开发人员，开源世界的参与者！">
+<meta property="og:description" content="传输层的两个主要协议 TCP 与 UDP 的学习1. 传输层功能传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。2. TCP 和 UDP在 TCP&#x2F;IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP 连接的概念">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-08T07:15:52.975Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="锅盖的博客" type="application/atom+xml">
@@ -146,49 +147,188 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-TCP与UDP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/13/%E7%AC%AC%E4%B8%89%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2019-12-13T03:56:23.964Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/13/%E7%AC%AC%E4%B8%89%E7%AB%A0/">第三章</a>
+    <h1 class="article-title" itemprop="name">
+      TCP与UDP
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/01/31/TCP%E4%B8%8EUDP/" class="archive-article-date">
+  	<time datetime="2020-01-31T11:25:13.245Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="传输层的两个主要协议-TCP-与-UDP-的学习"><a href="#传输层的两个主要协议-TCP-与-UDP-的学习" class="headerlink" title="传输层的两个主要协议 TCP 与 UDP 的学习"></a>传输层的两个主要协议 TCP 与 UDP 的学习</h1><h2 id="1-传输层功能"><a href="#1-传输层功能" class="headerlink" title="1. 传输层功能"></a>1. 传输层功能</h2><pre><code>传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。
+传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。</code></pre><h2 id="2-TCP-和-UDP"><a href="#2-TCP-和-UDP" class="headerlink" title="2. TCP 和 UDP"></a>2. TCP 和 UDP</h2><pre><code>在 TCP/IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP</code></pre><ul>
+<li><p>连接的概念<br>  连接是指各种设备、线路，或网络中进行**通信的两个应用程序为了相互传递消息而专有的、虚拟的通信线路。</p>
+</li>
+<li><p>TCP 简介</p>
+<ul>
+<li>TCP 是<strong>面向连接的</strong>、可靠的流协议。TCP 为提供可靠性传输，实行 “顺序控制” 或 “重发控制” 机制。 此外还具有 “流控制（流量控制）”、“拥塞控制”、提高网络利用率等众多功能。</li>
+</ul>
+</li>
+<li><p>UDP 简介</p>
+<ul>
+<li>UDP 不提供复杂的控制机制，<strong>利用 IP 提供面向无连接的通信服务</strong>。并且它是将应用程序发来的数据在收到的那一刻，立即原样发送到网络上的一种机制。因此它是不具有可靠性的数据报传输协议。细微的处理它会交给上层的应用去完成。在 UDP 的情况下，不能保证消息一定会到达。因此应用有时会根据自己的需求进行重发处理。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>二者的优势对比<ul>
+<li>TCP 的优势在于能够实现可靠的传输，它是面向有连接并具备顺序控制、重发控制等机制，在应用需要可靠传输时使用较多。</li>
+<li>UDP 的优势在简单、高速。主要用于哪些对高速传输和实时性要求有较高要求的通信，如视频、音频等即时通信，在多播和广播通信中常常使用 UDP 而不是 TCP。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-端口号"><a href="#3-端口号" class="headerlink" title="3. 端口号"></a>3. 端口号</h2><pre><code>端口号类似于传输层的地址</code></pre><h3 id="通过-IP-地址、端口号、协议号进行通信识别"><a href="#通过-IP-地址、端口号、协议号进行通信识别" class="headerlink" title="通过 IP 地址、端口号、协议号进行通信识别"></a>通过 IP 地址、端口号、协议号进行通信识别</h3><pre><code>在 TCP/IP 或 UDP/IP 通信中通常采用5个信息来识别一个通信。它们时“源 IP 地址”、 “目的 IP 地址”、 “协议号”（表示上层是 TCP 还是 UDP）、 “源端口号”、 “目的端口号”.</code></pre><h3 id="端口号与协议"><a href="#端口号与协议" class="headerlink" title="端口号与协议"></a>端口号与协议</h3><pre><code>不同的传输协议可以使用相同的端口号。TCP 和 UDP 使用同一个端口号时，在端口号上的处理是不同的，根据不同的传输协议进行不同的处理。</code></pre><h2 id="4-TCP-的特点"><a href="#4-TCP-的特点" class="headerlink" title="4. TCP 的特点"></a>4. TCP 的特点</h2><pre><code>TCP 是一种可靠的传输，而为了通过 IP 实现可靠的传输需要解决以下问题：数据的破坏、丢包、重复以及分片顺序混乱等。
+TCP 通过检验和、序列号、确认应答、重发控制、连接管理以及窗口控制等机制对应的解决了上述问题，实现可靠传输。</code></pre><ul>
+<li><p>利用序列号和确认应答（ACK）提高可靠性<br>  序列号是按顺序给发送数据的每一个字节都标上号码的编号。接受端查询接收数据的 TCP 首部中的序列号和数据的长度，将下一步应该接收的序号作为确认应答返送回去。 通过序列号和确认应答可以实现<strong>重发控制以及重复控制</strong>等功能。</p>
+</li>
+<li><p>重发超时：在重发数据之前，等待确认应答到来的那个确定的时间间隔。如果超过了这个时间仍未得到确认应答，发送端将进行数据重发。</p>
+</li>
+<li><p>连接管理：<br>  TCP 是面向有连接的通信传输。面向有连接是指在数据通信开始之前就做好两端之间的准备工作。<br>  一个连接的建立与断开至少需要来回发送七个包。三次握手四次挥手。</p>
+</li>
+<li><p>TCP 以段为单位发送数据：<br>  段又称最大消息长度 MSS(Maximum Segment Size), MSS 是在三次握手的时候，在两端主机之间被计算得出。</p>
+</li>
+<li><p>利用窗口控制提高速度：<br>窗口的大小是指无需等待确认应答而可以继续发送数据的最大值。这个机制的实现使用了大量的缓冲区。</p>
+</li>
+<li><p>高速重发控制：发送端主机如果连续三次收到同一个确认应答，就会将其所对应的数据进行一个重发，这种机制比之前的超时管理更加高效。</p>
+</li>
+<li><p>流控制： 根据接收端实际接收能力控制发送端发送的数据量，通过控制窗口大小实现，TCP 首部中撞门有一个字段用来通知窗口的大小。</p>
+</li>
+<li><p>拥塞控制： 根据网络状况控制发送端发送数据的数量。</p>
+</li>
+</ul>
 
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/31/TCP%E4%B8%8EUDP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/12/13/%E7%AC%AC%E4%B8%89%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第三章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输层的两个主要协议-TCP-与-UDP-的学习"><span class="toc-number">1.</span> <span class="toc-text">传输层的两个主要协议 TCP 与 UDP 的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-传输层功能"><span class="toc-number">1.1.</span> <span class="toc-text">1. 传输层功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-TCP-和-UDP"><span class="toc-number">1.2.</span> <span class="toc-text">2. TCP 和 UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-端口号"><span class="toc-number">1.3.</span> <span class="toc-text">3. 端口号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过-IP-地址、端口号、协议号进行通信识别"><span class="toc-number">1.3.1.</span> <span class="toc-text">通过 IP 地址、端口号、协议号进行通信识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端口号与协议"><span class="toc-number">1.3.2.</span> <span class="toc-text">端口号与协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-TCP-的特点"><span class="toc-number">1.4.</span> <span class="toc-text">4. TCP 的特点</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -211,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
