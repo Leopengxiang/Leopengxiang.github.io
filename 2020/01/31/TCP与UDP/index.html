@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>TCP与UDP | 锅盖的博客</title>
+  <title>传输层的两个主要协议 TCP 与 UDP 的学习 | 锅盖的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="传输层的两个主要协议 TCP 与 UDP 的学习1. 传输层功能传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。2. TCP 和 UDP在 TCP&#x2F;IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP 连接的概念">
-<meta name="keywords" content="code and everything">
+  <meta name="description" content="1. 传输层功能传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。2. TCP 和 UDP在 TCP&#x2F;IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP 连接的概念  连接是指各种设备、线路，或网络中进行**通信的两">
+<meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP与UDP">
+<meta property="og:title" content="传输层的两个主要协议 TCP 与 UDP 的学习">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;31&#x2F;TCP%E4%B8%8EUDP&#x2F;index.html">
 <meta property="og:site_name" content="锅盖的博客">
-<meta property="og:description" content="传输层的两个主要协议 TCP 与 UDP 的学习1. 传输层功能传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。2. TCP 和 UDP在 TCP&#x2F;IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP 连接的概念">
+<meta property="og:description" content="1. 传输层功能传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。2. TCP 和 UDP在 TCP&#x2F;IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP 连接的概念  连接是指各种设备、线路，或网络中进行**通信的两">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-08T07:15:52.975Z">
+<meta property="og:updated_time" content="2020-01-31T11:33:35.762Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="锅盖的博客" type="application/atom+xml">
@@ -154,7 +154,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      TCP与UDP
+      传输层的两个主要协议 TCP 与 UDP 的学习
     </h1>
   
 
@@ -167,7 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="传输层的两个主要协议-TCP-与-UDP-的学习"><a href="#传输层的两个主要协议-TCP-与-UDP-的学习" class="headerlink" title="传输层的两个主要协议 TCP 与 UDP 的学习"></a>传输层的两个主要协议 TCP 与 UDP 的学习</h1><h2 id="1-传输层功能"><a href="#1-传输层功能" class="headerlink" title="1. 传输层功能"></a>1. 传输层功能</h2><pre><code>传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。
+        <h2 id="1-传输层功能"><a href="#1-传输层功能" class="headerlink" title="1. 传输层功能"></a>1. 传输层功能</h2><pre><code>传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。
 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。</code></pre><h2 id="2-TCP-和-UDP"><a href="#2-TCP-和-UDP" class="headerlink" title="2. TCP 和 UDP"></a>2. TCP 和 UDP</h2><pre><code>在 TCP/IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP</code></pre><ul>
 <li><p>连接的概念<br>  连接是指各种设备、线路，或网络中进行**通信的两个应用程序为了相互传递消息而专有的、虚拟的通信线路。</p>
 </li>
@@ -215,7 +215,23 @@ TCP 通过检验和、序列号、确认应答、重发控制、连接管理以�
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -309,7 +325,7 @@ TCP 通过检验和、序列号、确认应答、重发控制、连接管理以�
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输层的两个主要协议-TCP-与-UDP-的学习"><span class="toc-number">1.</span> <span class="toc-text">传输层的两个主要协议 TCP 与 UDP 的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-传输层功能"><span class="toc-number">1.1.</span> <span class="toc-text">1. 传输层功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-TCP-和-UDP"><span class="toc-number">1.2.</span> <span class="toc-text">2. TCP 和 UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-端口号"><span class="toc-number">1.3.</span> <span class="toc-text">3. 端口号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过-IP-地址、端口号、协议号进行通信识别"><span class="toc-number">1.3.1.</span> <span class="toc-text">通过 IP 地址、端口号、协议号进行通信识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端口号与协议"><span class="toc-number">1.3.2.</span> <span class="toc-text">端口号与协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-TCP-的特点"><span class="toc-number">1.4.</span> <span class="toc-text">4. TCP 的特点</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-传输层功能"><span class="toc-number">1.</span> <span class="toc-text">1. 传输层功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-TCP-和-UDP"><span class="toc-number">2.</span> <span class="toc-text">2. TCP 和 UDP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-端口号"><span class="toc-number">3.</span> <span class="toc-text">3. 端口号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过-IP-地址、端口号、协议号进行通信识别"><span class="toc-number">3.1.</span> <span class="toc-text">通过 IP 地址、端口号、协议号进行通信识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端口号与协议"><span class="toc-number">3.2.</span> <span class="toc-text">端口号与协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-TCP-的特点"><span class="toc-number">4.</span> <span class="toc-text">4. TCP 的特点</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -415,6 +431,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

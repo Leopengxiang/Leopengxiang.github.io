@@ -155,7 +155,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/TCP%E4%B8%8EUDP/">TCP与UDP</a>
+      <a class="article-title" href="/2020/01/31/TCP%E4%B8%8EUDP/">传输层的两个主要协议 TCP 与 UDP 的学习</a>
     </h1>
   
 
@@ -168,7 +168,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="传输层的两个主要协议-TCP-与-UDP-的学习"><a href="#传输层的两个主要协议-TCP-与-UDP-的学习" class="headerlink" title="传输层的两个主要协议 TCP 与 UDP 的学习"></a>传输层的两个主要协议 TCP 与 UDP 的学习</h1><h2 id="1-传输层功能"><a href="#1-传输层功能" class="headerlink" title="1. 传输层功能"></a>1. 传输层功能</h2><pre><code>传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。
+        <h2 id="1-传输层功能"><a href="#1-传输层功能" class="headerlink" title="1. 传输层功能"></a>1. 传输层功能</h2><pre><code>传输层的功能：确定网络层发来的包应该由哪个应用程序所接收的。
 传输层为了实现该功能使用了**端口号**这样的识别码；因此可以像把IP地址看作网络层的地址、mac地址看作数据链路层的地址一样，将端口号视作传输层的地址。</code></pre><h2 id="2-TCP-和-UDP"><a href="#2-TCP-和-UDP" class="headerlink" title="2. TCP 和 UDP"></a>2. TCP 和 UDP</h2><pre><code>在 TCP/IP 中能够实现传输层功能的，具有代表性的协议是 TCP 和 UDP</code></pre><ul>
 <li><p>连接的概念<br>  连接是指各种设备、线路，或网络中进行**通信的两个应用程序为了相互传递消息而专有的、虚拟的通信线路。</p>
 </li>
@@ -216,7 +216,23 @@ TCP 通过检验和、序列号、确认应答、重发控制、连接管理以�
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -473,6 +489,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
